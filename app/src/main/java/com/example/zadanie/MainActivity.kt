@@ -37,13 +37,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnReplace).setOnClickListener {
-            var tekst = findViewById<EditText>(R.id.AddText).text
+            var tekst = findViewById<EditText>(R.id.AddText).text.toString()
             findViewById<TextView>(R.id.TextView1).text = tekst;
-
-
         }
         findViewById<Button>(R.id.btnAddText).setOnClickListener {
-            var tekst = findViewById<EditText>(R.id.AddText).text;
+            var tekst = findViewById<EditText>(R.id.AddText).text.toString();
             findViewById<TextView>(R.id.TextView1).text = findViewById<TextView>(R.id.TextView1).text.toString() + tekst;
         }
 
