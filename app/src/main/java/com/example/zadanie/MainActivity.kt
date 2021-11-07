@@ -38,13 +38,19 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnReplace).setOnClickListener {
             var tekst = findViewById<EditText>(R.id.AddText).text
-            findViewById<TextView>(R.id.txtv1).text = tekst;
-            findViewById<EditText>(R.id.AddText).setText("");
+            findViewById<TextView>(R.id.TextView1).text = tekst;
+
 
         }
         findViewById<Button>(R.id.btnAddText).setOnClickListener {
-            var tekst = findViewById<EditText>(R.id.AddText).text
-            findViewById<TextView>(R.id.txtv1).text = findViewById<TextView>(R.id.txtv1).text.toString() + tekst
+            var tekst = findViewById<EditText>(R.id.AddText).text;
+            findViewById<TextView>(R.id.TextView1).text = findViewById<TextView>(R.id.TextView1).text.toString() + tekst;
+        }
+
+        findViewById<Button>(R.id.btnAddNumbers).setOnClickListener {
+
+            var suma = findViewById<EditText>(R.id.Numer1).text.toString().toInt() + findViewById<EditText>(R.id.Numer2).text.toString().toInt();
+            findViewById<TextView>(R.id.TextView2).text = suma.toString()
         }
     }
 
