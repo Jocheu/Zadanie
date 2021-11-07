@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btnReplace).setOnClickListener {
+            findViewById<TextView>(R.id.TextView1).text = "";
             var tekst = findViewById<EditText>(R.id.AddText).text.toString()
             findViewById<TextView>(R.id.TextView1).text = tekst;
         }
